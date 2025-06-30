@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",          // Compiles to modern JavaScript (ES2020)
+    "module": "commonjs",        // Uses CommonJS modules (Node.js default)
+    "outDir": "./dist",          // Output directory for compiled JS files
+    "rootDir": "./src",          // Source directory for TS files
+    "strict": true,              // Enables strict type checking
+    "moduleResolution": "node",  // Follows Node.js module resolution
+    "esModuleInterop": true,     // Better compatibility with ES modules
+    "skipLibCheck": true,        // Skips type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Prevents case-sensitive bugs
+    "noImplicitAny": true,       // Disallows implicit `any` types
+    "baseUrl": ".",              // Base directory for module resolution
+    "paths": {                   // Allows path aliases (e.g., "@/controllers")
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "include": ["src/**/*"],       // Files to include in compilation
+  "exclude": ["node_modules"]    // Files to exclude from compilation
+}
